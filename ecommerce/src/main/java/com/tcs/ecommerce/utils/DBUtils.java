@@ -12,8 +12,9 @@ public class DBUtils {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/tcs","root","y13cs958");
+			connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/tcs?useSSL=false","root","y13cs958");
 			
+			connection.setAutoCommit(false);
 			return connection;
 			
 		} catch (ClassNotFoundException | SQLException e) {
