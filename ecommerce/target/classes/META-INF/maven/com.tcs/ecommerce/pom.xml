@@ -8,23 +8,40 @@
   	<maven.compiler.source>1.8</maven.compiler.source>
   </properties>
   <dependencies>
+ <dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>5.2.13.Final</version>
+</dependency>
   	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 	<dependency>
 	    <groupId>mysql</groupId>
 	    <artifactId>mysql-connector-java</artifactId>
 	    <version>8.0.15</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>1.6.4</version>
+</dependency>
+<dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-api</artifactId>
+       <version>1.7.5</version>
+   </dependency>
 <dependency>
 		<groupId>org.projectlombok</groupId>
 		<artifactId>lombok</artifactId>
 		<version>1.18.16</version>
 		<scope>provided</scope>
 	</dependency>
+	
   <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
-    <version>5.2.5.RELEASE</version>
+    <version>5.0.5.RELEASE</version>
 </dependency>
   <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
 <dependency>
@@ -32,6 +49,28 @@
     <artifactId>commons-dbcp2</artifactId>
     <version>2.5.0</version>
 </dependency>
-  
+<dependency>
+ 	<groupId>org.springframework.data</groupId>
+ 	<artifactId>spring-data-jpa</artifactId>
+ 	<version>2.0.6.RELEASE</version>
+ </dependency>
+ <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    <version>2.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+<dependency>
+    <groupId>org.javassist</groupId>
+    <artifactId>javassist</artifactId>
+    <version>3.23.1-GA</version>
+</dependency>
+  <dependency>
+			<!-- Only bundled with java 1.6+ -->
+			<groupId>javax.annotation</groupId>
+			<artifactId>jsr250-api</artifactId>
+			<version>1.0</version>
+		</dependency>
   </dependencies>
 </project>

@@ -7,33 +7,42 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
 import com.tcs.ecommerce.model.Product;
 import com.tcs.ecommerce.utils.DBUtils;
 
+@Repository
 public class ProductDAOImpl implements ProductDAO {
 	
-	private ProductDAOImpl() {
-		
-		
-		
-	}
+	@Autowired
+	DBUtils dbUtils;
 	
-	private static ProductDAO dao;
+//	private ProductDAOImpl() {
+//		
+//		
+//		
+//	}
+//	
+//	private static ProductDAO dao;
+//	
+//	public static ProductDAO getInstance() {
+//		
+//		if(dao==null) {
+//			dao=new ProductDAOImpl();
+//			return dao;
+//		}
+//		return dao;
+//		
+//	}
 	
-	public static ProductDAO getInstance() {
-		
-		if(dao==null) {
-			dao=new ProductDAOImpl();
-			return dao;
-		}
-		return dao;
-		
-	}
 	
-
 	@Override
 	public String createProduct(Product product) {
-		Connection connection=DBUtils.getConnection();
+		/*
+		Connection connection=dbUtils.getConnection();
 		PreparedStatement preparedStatement=null;
 		int result=0;
 		String insertProduct = "insert into PRODUCT (productid,productname,description,category,price) values(?,?,?,?,?)";
@@ -68,14 +77,16 @@ public class ProductDAOImpl implements ProductDAO {
 			return "fail";
 		}
 		finally {
-			DBUtils.closeConnection(connection);
+			dbUtils.closeConnection(connection);
 		}
+		*/
+		return null;
 	}
 
 	@Override
 	public Optional<Product> getProductById(int id) {
-		
-		Connection connection=DBUtils.getConnection();
+		/*
+		Connection connection=dbUtils.getConnection();
 		PreparedStatement preparedStatement=null;
 		ResultSet resultSet=null;
 		Product product=null;
@@ -108,9 +119,11 @@ public class ProductDAOImpl implements ProductDAO {
 			
 		}
 		finally {
-			DBUtils.closeConnection(connection);
+			dbUtils.closeConnection(connection);
 		}
 		return Optional.of(product);
+		*/
+		return null;
 	}
 
 	@Override

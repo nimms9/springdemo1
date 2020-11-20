@@ -20,6 +20,7 @@ public class Main {
 		System.out.println(dao2.hashCode());
 		System.out.println(dao.equals(dao2));*/
 		
+		/*
 		
 		Product product=new Product(4,"laptop","i7 10th gen",193.0f,"laptop");
 		
@@ -47,6 +48,7 @@ public class Main {
 		else {
 			System.out.println("product is not available");
 		}
+		*/
 	}
 
 }
